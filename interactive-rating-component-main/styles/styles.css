@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+:root{
+    --cor-de-fundo: #141519;
+    --cor-caixa: #1f2630;
+    --cor-item-desselecionado: #262f38;
+    --cor-item-selecionado: #7c8898;
+    --cor-laranja: #fc7613;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+
+}
+
+.container{
+    display: flex;
+    width: 400px;
+    height: 440px;
+    background-color: var(--cor-caixa); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+.tela-agradecimento{
+    display: none;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 1%;
+}
