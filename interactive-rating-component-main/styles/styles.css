@@ -26,6 +26,7 @@ body{
     margin: auto;
     border-radius: 5%;
     padding: 20px;
+
 }
 
 .tela-agradecimento{
@@ -35,4 +36,15 @@ body{
 .attribution{
     position: absolute;
     bottom: 1%;
+}
+
+.tela-selecao{
+    display: flex;
+}
+
+.botao-enviar{
+    border: none;
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
 }
