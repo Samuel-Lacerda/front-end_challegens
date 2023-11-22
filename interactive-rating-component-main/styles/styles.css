@@ -13,38 +13,3 @@ body{
 
 }
 
-.container{
-    display: flex;
-    width: 400px;
-    height: 440px;
-    background-color: var(--cor-caixa); 
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    border-radius: 5%;
-    padding: 20px;
-
-}
-
-.tela-agradecimento{
-    display: none;
-}
-
-.attribution{
-    position: absolute;
-    bottom: 1%;
-}
-
-.tela-selecao{
-    display: flex;
-}
-
-.botao-enviar{
-    border: none;
-    width: 400px;
-    height: 50px;
-    border-radius: 30px;
-}
