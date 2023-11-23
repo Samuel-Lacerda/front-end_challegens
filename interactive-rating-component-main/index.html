@@ -17,10 +17,27 @@
   <div class="container">
 
     <div class="tela-selecao">
-      <h1>Como fomos?</h1>
+      <div class="icon-star"><img src="images/icon-star.svg" alt="Icone estrela"></div>
+      <h1>Como nos saimos?</h1>
       <p>Informe-nos como nos saímos com sua solicitação de suporte. Todos os comentários são bem-vindos para nos ajudar a melhorar nossos serviços!</p>
-      <div>1 2 3 4 5</div>
-      <input type="submit" value="Enviar" class="botao-enviar">
+      <ul>
+        <li>
+          <button onclick="botaoSelecionado()">1</button>
+        </li>
+        <li>
+          <button onclick="botaoSelecionado()">2</button>
+        </li>
+        <li>
+          <button onclick="botaoSelecionado()">3</button>
+        </li> 
+        <li>
+          <button onclick="botaoSelecionado()">4</button>
+        </li> 
+        <li>
+          <button onclick="botaoSelecionado()">5</button>
+        </li>
+      </ul>
+      <input type="submit" value="Enviar" class="btn">
     </div>
   
 
@@ -29,9 +46,14 @@
   <!-- Thank you state start -->
 
   <div class="tela-agradecimento">
-    Você selecionou <!-- Add rating here --> de 5
-    obrigado!
-    Agradecemos por dedicar seu tempo para avaliar. Se precisar de mais suporte, não hesite em entrar em contato!
+
+    <img src="images/illustration-thank-you.svg" alt="Icone celular">
+
+    <p class="resultado">Você selecionou ‎<span class="num-escolhido"></span>‎ de 5</p>
+    
+    <h1>Obrigado!</h1>
+    
+    <p class="agradecimento">Agradecemos por dedicar seu tempo para avaliar. Se precisar de mais suporte, não hesite em entrar em contato!</p>
   </div>
 
   <!-- Thank you state end -->
@@ -41,5 +63,7 @@
     Desafio por <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     código por <a href="https://github.com/Samuel-Lacerda" target="_blank">Samuel Lacerda</a>.
   </footer>
+
+  <script src="script/script.js"></script>
 </body>
 </html>
