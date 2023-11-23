@@ -92,7 +92,11 @@ ul{
     margin-bottom: 30px;
     margin-top: 40px;
 }
-li{
+
+li button{
+    color: var(--cor-fonte-secundaria);
+    font-weight: 700;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +105,7 @@ li{
     border-radius: 50%;
     background-color: var(--cor-item-desselecionado);
 }
-li:hover{
+li button:hover{
     background-color: var(--cor-item-selecionado);
     color: #ffffff;
     cursor: pointer;
@@ -152,13 +156,6 @@ li:hover{
     
 }
 
-li button{
-    text-decoration: none;
-    border: none;
-    background-color: transparent;
-    color: var(--cor-fonte-secundaria);
-    font-weight: 700;
-}
 
 
 .agradecimento{
@@ -166,6 +163,12 @@ li button{
     font-weight: 400;
     text-align: center;
 }
+
+.selecionado{
+    background-color: var(--cor-item-selecionado);
+        color: #ffffff;
+}
+
 
 /*Rodapé*/
 
