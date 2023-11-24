@@ -36,7 +36,7 @@ body{
     border-radius: 20px;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 430px) {
     /*Media Querie Tela de Seleção*/
     .container {
         width: 350px;
