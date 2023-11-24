@@ -36,6 +36,33 @@ body{
     border-radius: 20px;
 }
 
+@media only screen and (max-width: 375px) {
+    /*Media Querie Tela de Seleção*/
+    .container {
+        width: 350px;
+        height: 370px;
+    }
+
+     body .tela-selecao h1{
+        margin-bottom: 15px;
+    }
+
+    body ul{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    /*Media Querie Tela de Agradecimento*/
+    body .tela-agradecimento img{
+        margin-top: 0px;
+        margin-bottom: 25px;
+        width: 200px;
+        height: 130px;
+    }
+  }
+
 .tela-selecao{
     padding: 25px;
     display: flex;
