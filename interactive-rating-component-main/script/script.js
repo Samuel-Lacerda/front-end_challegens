@@ -4,9 +4,10 @@ let saida = document.querySelector('.num-escolhido');
 
 function botaoSelecionado(numero){
     let btnSelecionado = document.querySelectorAll('button');
+    saida.innerHTML = ``;
 
     for (let i = 0; i<5; i++){
-        btnSelecionado[i].classList.remove('selecionado')
+        btnSelecionado[i].classList.remove('selecionado');
     }
 
 
