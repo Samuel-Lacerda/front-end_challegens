@@ -1,5 +1,6 @@
 let telaSelecao = document.querySelector('.tela-selecao');
 let telaAgradecimento = document.querySelector('.tela-agradecimento');
+let saida = document.querySelector('.num-escolhido');
 
 function botaoSelecionado(numero){
     let btnSelecionado = document.querySelectorAll('button');
@@ -9,13 +10,15 @@ function botaoSelecionado(numero){
     }
 
 
-    let saida = document.querySelector('.num-escolhido');
     btnSelecionado[numero-1].classList.add('selecionado');
-    saida.innerHTML += `${numero}`
+    saida.innerHTML += `${numero}`;
 }
 
 
 function btnEnviar(){
-    telaSelecao.style.display = 'none';
-    telaAgradecimento.style.display = 'flex'; 
-}
+
+    if (saida.textContent.trim() !== ''){
+        telaSelecao.style.display = 'none';
+        telaAgradecimento.style.display = 'flex'; 
+    }
+    } 
