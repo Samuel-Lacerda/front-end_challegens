@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
+/* Width 375px até 600px */
+
 :root{
     /*Palheta de cores gerais - Tema 01 */
     --fundo-tema01: #3b4863;
@@ -12,6 +14,7 @@
     --sombra-tecla-tema01: #404e72;
     --tecla-vermelha: #d13e2e;
     --tecla-vermelho-escuro: #93261a;
+    --cor-tecla-tema01: #ebe3db22;
 }
 
 
@@ -22,14 +25,50 @@
     font-family: 'League Spartan', sans-serif;
 }
 
-@media (min-width:992px) and (max-width:1440px){
+body {
+    background-color: var(--fundo-tema01);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+}
+
+.tela-calculadora{
+    background-color: var(--fundo-tela-tema01);
+    width: 85vw;
+    margin-bottom: 30px;
+    height: 10vh;
+}
+
+.calculadora {
+    background-color: var(--fundo-teclado-tema01);
+    width: 85vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.teclado{
+    padding: 15px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
-@media (min-width:601px) and (max-width:991px) {
-
+.teclado li{
+    width: 5vw;
+    height: 5vh;
+    background-color: #ffffff;
+    margin: 10px 10px;
 }
 
-@media (min-width:375px) and (max-width: 600px){
-
-}
+.attribution { font-size: 11px; text-align: center; position:fixed;
+bottom: 0;}
+.attribution a { color: hsl(228, 45%, 44%); }
