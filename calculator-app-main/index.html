@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
   
-  <title>Frontend Mentor | Calculator app</title>
+  <title>Calculadora</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-
+  <section class="calculadora">
+    <section class="calculadora__tela"></section>
+    <ul class="calculadora__teclas">
+      <li value="7">7</li>
+      <li value="8">8</li>
+      <li value="9">9</li>
+      <li value="">DEL</li>
+      <li value="4">4</li>
+      <li value="5">5</li>
+      <li value="7">6</li>
+      <li value="">+</li>
+      <li value="1">1</li>
+      <li value="2">2</li>
+      <li value="3">3</li>
+      <li value="">-</li>
+      <li value="">.</li>
+      <li value="0">0</li>
+      <li value="">/</li>
+      <li value="">X</li>
+      <li value="">RESET</li>
+      <l value="">=</li>
+    </ul>
+  </section>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="js/script.js"></script>
 </body>
 </html>

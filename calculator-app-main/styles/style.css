@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+:root{
+    /* Tema 01 */
+    --background-tema-01: hsl(222, 26%, 31%);
+    --background-teclado-tema-01: hsl(223, 31%, 20%);
+    --background-tela-tema-01: hsl(224, 36%, 15%);
+    
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
