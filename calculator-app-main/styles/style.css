@@ -24,6 +24,9 @@ body{
     width: 300px;
     height: 40px;
     background-color: rgb(95, 182, 170);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .calculadora__teclas{
     display: flex;
