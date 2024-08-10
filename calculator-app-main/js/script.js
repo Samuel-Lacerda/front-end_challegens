@@ -27,15 +27,21 @@ function exibeNaTela(tecla){
     }
     if (tecla.value == 11){
         somaValores()
+        tela.innerHTML = resultado
     }
     if (tecla.value == 10){
         deletaUltimoInserido()
     }
     if (tecla.value == 12){
         subtraiValores()
+        tela.innerHTML = resultado
     }
     if (tecla.value == 14){
         multiplicaValores()
+        tela.innerHTML = resultado
+    }
+    if (tecla.value == 16){
+        mostrarResultado()
     }
 }
 
@@ -58,7 +64,6 @@ function somaValores(tecla){
     valores = Number(valoresTela.join(''))
     valoresTela = []
     resultado += valores
-    tela.innerHTML = resultado
 
 }
 
@@ -66,12 +71,18 @@ function subtraiValores(tecla){
     valores = Number(valoresTela.join(''))
     valoresTela = []
     resultado -= valores
-    tela.innerHTML = resultado
 }
 
 function multiplicaValores(tecla){
     valores = Number(valoresTela.join(''))
     valoresTela = []
-    resultado *= valores
+    if (resultado === 0 && valores !== 0) {
+        resultado = valores;
+    } else {
+        resultado *= valores;
+    }
+}
+
+function mostrarResultado(){
     tela.innerHTML = resultado
 }
