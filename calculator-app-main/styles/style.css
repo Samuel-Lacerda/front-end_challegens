@@ -8,7 +8,33 @@
     
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.calculadora{
+    justify-content: center;
+    align-self: center;
 
+}
+.calculadora__tela{
+    width: 300px;
+    height: 40px;
+    background-color: rgb(95, 182, 170);
+}
+.calculadora__teclas{
+    display: flex;
+}
+li{
+    padding: 10px;
+    border: 1px solid black;
+}
+li:hover{
+    cursor: pointer;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
