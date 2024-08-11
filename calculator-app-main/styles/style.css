@@ -8,6 +8,8 @@
     --background-teclado-tema-01: hsl(223, 31%, 20%);
     --background-tela-tema-01: hsl(224, 36%, 15%);
     --background-tecla-tema-01: hsl(30, 25%, 89%);
+    --background-teclas-vermelhas: hsl(6, 63%, 50%);
+    --background-teclas-azuis: hsl(225, 21%, 49%);
     
 }
 
@@ -32,7 +34,38 @@ header{
     height: 100px;
 }
 header > h1{
-    font-size: 28px;
+    font-size: 28px
+}
+
+.temas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.temas > h2 {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#input-tema{
+    height: 20px;
+    width: 73px;
+    background: none;
+    appearance: none;
+    color: white;
+    background-color: var(--background-tela-tema-01);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+#input-tema::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--background-teclas-vermelhas);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .calculadora{
@@ -82,9 +115,19 @@ header > h1{
 
 }
 
+.tecla__igual{
+    background-color: var(--background-teclas-vermelhas);
+    color: white;
+}
+
+.tecla__reset, .tecla__del{
+    background-color: var(--background-teclas-azuis);
+    color: white;
+}
+
 .attribution { 
 margin-top: 30px;
-font-size: 11px; 
+font-size: 12px; 
 text-align: center;
 }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: white; }
