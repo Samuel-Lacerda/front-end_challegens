@@ -1,14 +1,9 @@
 const teclas = document.querySelectorAll('.tecla')
 const tela = document.querySelector('.tela')
 
-let valores = 0
-let resultado = 0
-
-let valoresTela = []
-
-
-
-
+const teclasDigitadas = []
+let valorTemporario = 0
+let operador = ''
 tela.innerHTML = 0
 
 teclas.forEach(tecla => {
@@ -17,72 +12,87 @@ teclas.forEach(tecla => {
 
 
 function exibeNaTela(tecla){
-
     if (tecla.value >= 0 && tecla.value <= 9){
-    valoresTela.push(tecla.value)
-    tela.innerHTML = `${valoresTela.join('')}`
+        teclasDigitadas.push(tecla.value)
+        tela.innerHTML = teclasDigitadas.join('')
     }
-    if (tecla.value == 15){
-        limpaTela()
-    }
-    if (tecla.value == 11){
-        somaValores()
-        tela.innerHTML = resultado
-    }
+
     if (tecla.value == 10){
-        deletaUltimoInserido()
+        if(teclasDigitadas.length > 1){
+            teclasDigitadas.pop()
+            tela.innerHTML = teclasDigitadas.join('')
+        } else {
+            teclasDigitadas.pop()
+            tela.innerHTML = 0
+        }
     }
-    if (tecla.value == 12){
-        subtraiValores()
-        tela.innerHTML = resultado
+
+    if (tecla.value == 15){
+        limparTela()
     }
-    if (tecla.value == 14){
-        multiplicaValores()
-        tela.innerHTML = resultado
+
+    if(tecla.value == 13){
+        teclasDigitadas.push('.')
+        tela.innerHTML = teclasDigitadas.join('')
     }
+
+    if(tecla.value == 11){
+        operador = tecla.getAttribute('data-name')
+        valorTemporario = Number(teclasDigitadas.join(''))
+        limparTela()
+    }
+    
+    if(tecla.value == 12){
+        operador = tecla.getAttribute('data-name')
+        valorTemporario = Number(teclasDigitadas.join(''))
+        limparTela()
+    }
+
+    if(tecla.value == 14){
+        operador = tecla.getAttribute('data-name')
+        valorTemporario = Number(teclasDigitadas.join(''))
+        limparTela()
+    }
+
+    if(tecla.value == 17){
+        operador = tecla.getAttribute('data-name')
+        valorTemporario = Number(teclasDigitadas.join(''))
+        limparTela()
+    }
+
     if (tecla.value == 16){
-        mostrarResultado()
+        let resultado = (calcula(operador,valorTemporario,Number(teclasDigitadas.join(''))))
+        limparTela()
+        teclasDigitadas.push(resultado)
+        tela.innerHTML = resultado
     }
 }
 
-function deletaUltimoInserido(){
-    if (valoresTela.length > 1){
-        valoresTela.pop()
-        tela.innerHTML = `${valoresTela.join('')}`
-    } else {
-        tela.innerHTML = 0
+
+
+function calcula(operador, valor1, valor2){
+    if(operador == 'soma'){
+        let resultado = valor1 + valor2
+        return resultado
+    }
+    if(operador == 'subtrai'){
+        let resultado = valor1 - valor2
+        return resultado
+    }
+    if(operador == 'multiplica'){
+        let resultado = valor1 * valor2
+        return resultado
+    }
+    if(operador == 'divide'){
+        let resultado = valor1 / valor2
+        return resultado
     }
 }
 
-function limpaTela(){
-    valoresTela = []
-    resultado = 0
+function limparTela(){
+    teclasDigitadas.forEach(elemento => {
+        teclasDigitadas.pop()
+    })
+    teclasDigitadas.pop()
     tela.innerHTML = 0
-}
-
-function somaValores(tecla){
-    valores = Number(valoresTela.join(''))
-    valoresTela = []
-    resultado += valores
-
-}
-
-function subtraiValores(tecla){
-    valores = Number(valoresTela.join(''))
-    valoresTela = []
-    resultado -= valores
-}
-
-function multiplicaValores(tecla){
-    valores = Number(valoresTela.join(''))
-    valoresTela = []
-    if (resultado === 0 && valores !== 0) {
-        resultado = valores;
-    } else {
-        resultado *= valores;
-    }
-}
-
-function mostrarResultado(){
-    tela.innerHTML = resultado
 }
