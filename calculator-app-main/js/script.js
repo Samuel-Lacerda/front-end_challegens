@@ -32,6 +32,7 @@ function exibeNaTela(tecla){
 
     if (tecla.value == 15){
         limparTela()
+        tela.innerHTML = 0
     }
 
     if(tecla.value == 13){
@@ -43,24 +44,28 @@ function exibeNaTela(tecla){
         operador = tecla.getAttribute('data-name')
         valorTemporario = Number(teclasDigitadas.join(''))
         limparTela()
+        teclasDigitadas.pop()
     }
     
     if(tecla.value == 12){
         operador = tecla.getAttribute('data-name')
         valorTemporario = Number(teclasDigitadas.join(''))
         limparTela()
+        teclasDigitadas.pop()
     }
 
     if(tecla.value == 14){
         operador = tecla.getAttribute('data-name')
         valorTemporario = Number(teclasDigitadas.join(''))
         limparTela()
+        teclasDigitadas.pop()
     }
 
     if(tecla.value == 17){
         operador = tecla.getAttribute('data-name')
         valorTemporario = Number(teclasDigitadas.join(''))
         limparTela()
+        teclasDigitadas.pop()
     }
 
     if (tecla.value == 16){
@@ -97,7 +102,6 @@ function limparTela(){
         teclasDigitadas.pop()
     })
     teclasDigitadas.pop()
-    tela.innerHTML = 0
 }
 
 function mudarTema(){

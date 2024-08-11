@@ -114,6 +114,9 @@ header > h1{
     box-sizing: border-box;
 
 }
+.tecla:hover{
+    cursor: pointer;
+}
 
 .tecla__igual{
     background-color: var(--background-teclas-vermelhas);
