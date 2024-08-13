@@ -3,14 +3,27 @@
 
 
 :root{
-    /* Tema 01 */
-    --background-tema-01: hsl(222, 26%, 31%);
-    --background-teclado-tema-01: hsl(223, 31%, 20%);
-    --background-tela-tema-01: hsl(224, 36%, 15%);
-    --background-tecla-tema-01: hsl(30, 25%, 89%);
-    --background-teclas-vermelhas: hsl(6, 63%, 50%);
-    --background-teclas-azuis: hsl(225, 21%, 49%);
-    
+    /*Background*/
+
+    --main-background-01: hsl(222, 26%, 31%);
+    --keypad-background-01: hsl(223, 31%, 20%);
+    --screen-background-01: hsl(224, 36%, 15%);
+
+    /*Teclas*/
+    --key-background-blue-01: hsl(225, 21%, 49%);
+    --key-shadow-blue-01: hsl(224, 28%, 35%);
+
+    --key-background-red-01: hsl(6, 63%, 50%);
+    --key-shadow-red-01: hsl(6, 70%, 34%);
+
+    --key-background-white-01: hsl(30, 25%, 89%);
+    --key-shadow-white-01: hsl(28, 16%, 65%);
+
+    /*Texto*/
+
+    --dark-grayish-blue-01: hsl(221, 14%, 31%);
+    --white-01: hsl(0, 0%, 100%);
+
 }
 
 body{
@@ -21,7 +34,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--background-tema-01);
+    background-color: var(--main-background-01);
 }
 
 header{
@@ -53,7 +66,7 @@ header > h1{
     background: none;
     appearance: none;
     color: white;
-    background-color: var(--background-tela-tema-01);
+    background-color: var(--screen-background-01);
     border-radius: 15px;
     padding: 5px;
 }
@@ -63,7 +76,7 @@ header > h1{
     appearance: none;
     width: 20px;
     height: 20px;
-    background: var(--background-teclas-vermelhas);
+    background: var(--key-background-red-01);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -81,7 +94,7 @@ header > h1{
     border-radius: 15px;
     font-size: 32px;
     color: white;
-    background-color: var(--background-tela-tema-01);
+    background-color: var(--screen-background-01);
     display: flex;
     justify-content: end;
     align-items: center;
@@ -94,7 +107,7 @@ header > h1{
 
 .calculadora__teclas{
     border-radius: 15px;
-    background-color: var(--background-teclado-tema-01);
+    background-color: var(--keypad-background-01);
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -107,11 +120,12 @@ header > h1{
     justify-content: center;
     align-items: center;
     font-size: 26px;
-    background-color: var(--background-tecla-tema-01);
+    background-color: var(--key-background-white-01);
     flex: 1 0 21%;
     margin: 10px 10px 10px 10px;
     border-radius: 8px;
     box-sizing: border-box;
+    box-shadow: 0px 3px var(--key-shadow-white-01);
 
 }
 .tecla:hover{
@@ -119,13 +133,15 @@ header > h1{
 }
 
 .tecla__igual{
-    background-color: var(--background-teclas-vermelhas);
+    background-color: var(--key-background-red-01);
     color: white;
+    box-shadow: 0px 3px var(--key-shadow-red-01);
 }
 
 .tecla__reset, .tecla__del{
-    background-color: var(--background-teclas-azuis);
+    background-color: var(--key-background-blue-01);
     color: white;
+    box-shadow: 0px 3px var(--key-shadow-blue-01);
 }
 
 .attribution { 

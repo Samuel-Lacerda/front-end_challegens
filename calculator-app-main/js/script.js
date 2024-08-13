@@ -1,8 +1,5 @@
 const teclas = document.querySelectorAll('.tecla')
 const tela = document.querySelector('.tela')
-const botaoTemas = document.querySelector('#input-tema')
-
-botaoTemas.addEventListener('click',mudarTema)
 
 const teclasDigitadas = []
 let valorTemporario = 0
@@ -102,9 +99,4 @@ function limparTela(){
         teclasDigitadas.pop()
     })
     teclasDigitadas.pop()
-}
-
-function mudarTema(){
-    botaoTemas.setAttribute('value', 3)
-    console.log(botaoTemas.value)
 }
