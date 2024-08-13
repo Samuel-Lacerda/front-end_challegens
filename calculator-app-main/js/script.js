@@ -33,8 +33,12 @@ function exibeNaTela(tecla){
     }
 
     if(tecla.value == 13){
-        teclasDigitadas.push('.')
-        tela.innerHTML = teclasDigitadas.join('')
+        if(!teclasDigitadas.includes('.')){
+            teclasDigitadas.push('.')
+            tela.innerHTML = teclasDigitadas.join('')
+        } else {
+            console.log('Eu não vou fazer isso não, doido.')
+        }
     }
 
     if(tecla.value == 11){
@@ -66,10 +70,12 @@ function exibeNaTela(tecla){
     }
 
     if (tecla.value == 16){
-        let resultado = (calcula(operador,valorTemporario,Number(teclasDigitadas.join(''))))
-        limparTela()
-        teclasDigitadas.push(resultado)
-        tela.innerHTML = resultado
+        if (teclasDigitadas.length > 0){
+            let resultado = (calcula(operador,valorTemporario,Number(teclasDigitadas.join(''))))
+            limparTela()
+            teclasDigitadas.push(resultado)
+            tela.innerHTML = resultado
+        }
     }
 }
 
@@ -95,8 +101,7 @@ function calcula(operador, valor1, valor2){
 }
 
 function limparTela(){
-    teclasDigitadas.forEach(elemento => {
+    while (teclasDigitadas.length > 0){
         teclasDigitadas.pop()
-    })
-    teclasDigitadas.pop()
+    }
 }
