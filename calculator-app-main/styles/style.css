@@ -36,6 +36,7 @@
     
 }
 
+
 body{
     font-family: "League Spartan", sans-serif;
     font-size: 32px;
@@ -97,7 +98,6 @@ header > h1{
     height: 650px;
     justify-content: center;
     align-self: center;
-
 }
 .calculadora__tela{
     width: 100%;
