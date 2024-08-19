@@ -24,18 +24,36 @@
     
     --dark-grayish-blue-01: hsl(221, 14%, 31%);
     --white-01: hsl(0, 0%, 100%);
-
-
+    
+    
     /* ----- Tema 02 -------*/
-
+    
     /*Background*/
-
+    
     --main-background-02: hsl(0, 0%, 90%);
     --keypad-background-02: hsl(0, 5%, 81%);
     --screen-background-02: hsl(0, 0%, 93%);
     
-}
+    /* ----- Tema 03 -------*/
 
+    /*Background*/
+    --main-background-03: hsl(268, 75%, 9%);
+    --keypad-background-03: hsl(268, 71%, 12%);
+    
+    /*Teclas*/    
+    --key-background-blue-03: hsl(281, 89%, 26%);
+    --key-shadow-blue-03: hsl(285, 91%, 52%);
+    
+    --key-background-pure-cyan-03: hsl(176, 100%, 44%);
+    --key-background-soft-cyan-03: hsl(177, 92%, 70%);
+    
+    --key-background-dark-violet-03:hsl(268, 47%, 21%);
+    --key-shadow-dark-violet-03: hsl(290, 70%, 36%);
+    
+    /*Texto*/
+    --light-yellow: hsl(52, 100%, 62%);
+    --very-dark-blue: hsl(198, 20%, 13%);
+}
 
 body{
     font-family: "League Spartan", sans-serif;
@@ -61,6 +79,7 @@ header{
 header > h1{
     font-size: 28px
 }
+
 
 .temas{
     display: flex;
@@ -127,6 +146,7 @@ header > h1{
 }
 
 .tecla{
+    color: var(--dark-grayish-blue-01);
     color: var(-dark-grayish-blue-01);
     display: flex;
     justify-content: center;
@@ -161,4 +181,4 @@ margin-top: 30px;
 font-size: 12px; 
 text-align: center;
 }
-.attribution a { color: white; }
+.attribution a { color: black }
