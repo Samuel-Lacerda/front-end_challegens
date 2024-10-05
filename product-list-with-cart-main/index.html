@@ -1,95 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Product list with cart</title>
   <link rel="stylesheet" href="assets/styles/reset.css">
   <link rel="stylesheet" href="assets/styles/style.css">
 </head>
+
 <body>
 
-  <h1>Desserts</h1>
+  <div class="container">
 
-  <ul class="menu">
+    <section class="tela">
 
-    <li class="menu__item">
-      <h1>Waffle with Berries</h1>
-      <h2 class="menu__item__name">Waffle</h2>
-      <p>6.50</p>
-      <button class="button__add-cart">Adicionar ao carrinho</button>
-    </li>
+      <h1 class="description__menu">Sobremesas</h1>
 
-    <li class="menu__item">
-      <h1>Vanilla Bean Crème Brûlée</h1>
-      <h2 class="menu__item__name">Crème Brûlée</h2>
-      <p>7.00</p>
-      <button class="button__add-cart">Adicionar ao carrinho</button>
-    </li>
+      <ul class="menu">
+        <li class="menu__item">
+          <h2 class="menu__item__name">Waffle</h2>
+          <h1 class="menu__item__description">Waffle with Berries</h1>
+          <p class="menu__item__price">6.50</p>
+          <button class="button__add__cart">Adicionar ao carrinho</button>
+        </li>
 
-    <li class="menu__item">
-      <h2>Macaron Mix of Five</h2>
-      <h2 class="menu__item__name">Macaron</h2>
-      <p>8.00</p>
-      <button class="button__add-cart">Adicionar ao carrinho</button>
-    </li>
+        <li class="menu__item">
+          <h2 class="menu__item__name">Crème Brûlée</h2>
+          <h1 class="menu__item__description">Vanilla Bean Crème Brûlée</h1>
+          <p class="menu__item__price">7.00</p>
+          <button class="button__add__cart">Adicionar ao carrinho</button>
+        </li>
 
-    <li class="menu__item">
-      <h1>Classic Tiramisu</h1>
-      <h2 class="menu__item__name">Tiramisu</h2>
-      <p>5.50</p>
-      <button class="button__add-cart">Adicionar ao carrinho</button>
-    </li>
+        <li class="menu__item">
+          <h2 class="menu__item__name">Macaron</h2>
+          <h2 class="menu__item__description">Macaron Mix of Five</h2>
+          <p class="menu__item__price">8.00</p>
+          <button class="button__add__cart">Adicionar ao carrinho</button>
+        </li>
 
-    <li class="menu__item">
-      <h1>Pistachio Baklava</h1>
-      <h2 class="menu__item__name">Baklava</h2>
-      <p>4.00</p>
-      <button class="button__add-cart">Adicionar ao carrinho</button>
-    </li>
+        <li class="menu__item">
+          <h2 class="menu__item__name">Tiramisu</h2>
+          <h1 class="menu__item__description">Classic Tiramisu</h1>
+          <p class="menu__item__price">5.50</p>
+          <button class="button__add__cart">Adicionar ao carrinho</button>
+        </li>
 
-    <li class="menu__item">
-      <h1>Lemon Meringue Pie</h1>
-      <h2 class="menu__item__name">Pie</h2>
-      <p>5.00</p>
-      <button class="button__add-cart">Adicionar ao carrinho</button>
-    </li>
+        <li class="menu__item">
+          <h2 class="menu__item__name">Baklava</h2>
+          <h1 class="menu__item__description">Pistachio Baklava</h1>
+          <p class="menu__item__price">4.00</p>
+          <button class="button__add__cart">Adicionar ao carrinho</button>
+        </li>
 
-    <li class="menu__item">
-      <h1>Red Velvet Cake</h1>
-      <h2 class="menu__item__name">Cake</h2>
-      <p>4.50</p>
-      <button class="button__add-cart">Adicionar ao carrinho</button>
-    </li>
+        <li class="menu__item">
+          <h2 class="menu__item__name">Pie</h2>
+          <h1 class="menu__item__description">Lemon Meringue Pie</h1>
+          <p class="menu__item__price">5.00</p>
+          <button class="button__add__cart">Adicionar ao carrinho</button>
+        </li>
 
-    <li class="menu__item"> 
-      <h1>Salted Caramel Brownie</h1>
-      <h2 class="menu__item__name">Brownie</h2>
-      <p>4.50</p>
-      <button class="button__add-cart">Adicionar ao carrinho</button>
-    </li>
+        <li class="menu__item">
+          <h2 class="menu__item__name">Cake</h2>
+          <h1 class="menu__item__description">Red Velvet Cake</h1>
+          <p class="menu__item__price">4.50</p>
+          <button class="button__add__cart">Adicionar ao carrinho</button>
+        </li>
 
-    <li class="menu__item">
-      <h1>Vanilla Panna Cotta</h1>
-      <h2 class="menu__item__name">Panna Cotta</h2>
-      <p>6.50</p>
-      <button class="button__add-cart">Adicionar ao carrinho</button>
-    </li>
-  </ul>
+        <li class="menu__item">
+          <h2 class="menu__item__name">Brownie</h2>
+          <h1 class="menu__item__description">Salted Caramel Brownie</h1>
+          <p class="menu__item__price">4.50</p>
+          <button class="button__add__cart">Adicionar ao carrinho</button>
+        </li>
 
-  <section>
-    Seu carrinho (<!-- Quantity -->)
-    Seus itens adicionados irão aparecer aqui
-  </section>
+        <li class="menu__item">
+          <h2 class="menu__item__name">Panna Cotta</h2>
+          <h1 class="menu__item__description">Vanilla Panna Cotta</h1>
+          <p class="menu__item__price">6.50</p>
+          <button class="button__add__cart">Adicionar ao carrinho</button>
+        </li>
+
+      </ul>
+      
+    </section>
+
+    <section class="cart">
+      <div class="title-cart">Seu carrinho (<span class="cart__num">0</span>)</div>
+      <div class="cart-empyt">Seus itens adicionados irão aparecer aqui</div>
+    </section>
+
+  </div>
 
   <div class="attribution">
-    Desafio por <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Desafio por <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Código por <a href="https://github.com/Samuel-Lacerda" target="_blank">Samuel Lacerda</a>.
   </div>
 
+
   <script src="assets/scripts/index.js"></script>
 </body>
+
 </html>
