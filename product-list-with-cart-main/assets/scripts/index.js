@@ -3,7 +3,9 @@ const itensNoCarrinho = document.querySelector('.cart__num')
 const textoCarrinhoVazio = document.querySelector('.cart-empyt')
 const botaoAddCarrinho = document.querySelectorAll('.button__add__cart')
 
-itensMenu = []
+const itensMenu = []
+const ListaItensPedido = []
+
 
 //Pega cada item já existente na pagina, remove os acentuos, troca espaço por hifens e cria sua imagem na tela.
 nomeItem.forEach(item => {
@@ -41,17 +43,39 @@ function trocaImgCarrinho() {
 }
 
 // Muda botão de comprar
-function mudaBotaoCompra(event) {
+function adicionaCarrinho(event) {
     criaIconeCarrinho()
+
     let elemento = event.currentTarget
     let valor = Number(elemento.previousElementSibling.innerText)
-    console.log(valor)
-
+    let elementoPai = elemento.parentElement
+    let nomeProduto = elementoPai.firstElementChild.innerText
+    let multiplicador = 1
+    montaListaPedido(multiplicador,nomeProduto)
+    console.log(ListaItensPedido[0])
     criaDecrementoEEncremento(elemento)
-    elemento.innerText = '1'
+    mudaBotaoCompra(elemento,multiplicador)    
+    atualizaCarrinhoEncremento()
+}
+
+function montaListaPedido(quantidade, nomeProduto){
+    let obj = {
+        quantidade: quantidade,
+        nomeProduto: nomeProduto
+    }
+    ListaItensPedido.push(obj)
+}
+
+function atualizaCarrinhoEncremento(valor, multiplicador){
+    itensNoCarrinho.innerText = 1
+}
+
+function mudaBotaoCompra(elemento,multiplicador){
+    elemento.innerText = multiplicador
     elemento.style.background = 'var(--Red)'
     elemento.style.color = 'white'
 }
+
 
 function criaDecrementoEEncremento(elemento) {
     let img1 = document.createElement('img')
@@ -82,6 +106,6 @@ if (itensNoCarrinho.innerText == 0) {
 }
 
 botaoAddCarrinho.forEach(elemento => {
-    elemento.addEventListener('click', mudaBotaoCompra)
+    elemento.addEventListener('click', adicionaCarrinho)
 })
 
