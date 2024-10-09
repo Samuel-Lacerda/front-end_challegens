@@ -105,6 +105,14 @@ body{
     margin-bottom: 15px;
 }
 
+.btn-increment{
+    margin-left: 40px;
+}
+
+.btn-decrement{
+    margin-right: 40px;
+}
+
 .button__add__cart{
     display: flex;
     justify-content: center;
